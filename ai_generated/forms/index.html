@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Agriculture Registration & Monitoring</title>
+
+<style>
+    :root {
+        --bg-page: #f4f5f7;
+        --bg-form: #ffffff;
+        --border: #d9d9d9;
+        --text-main: #222;
+        --text-muted: #666;
+        --accent: #5f7a5a;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+        margin: 0;
+        padding: 40px 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        background: var(--bg-page);
+        color: var(--text-main);
+    }
+
+    .form-wrapper {
+        max-width: 1000px;
+        margin: auto;
+        background: var(--bg-form);
+        border: 1px solid var(--border);
+        padding: 36px;
+    }
+
+    h1 { font-size: 22px; margin: 0 0 6px; }
+
+    .subtitle {
+        font-size: 13px;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+    }
+
+    fieldset {
+        border: 1px solid var(--border);
+        padding: 20px 22px;
+        margin-bottom: 24px;
+    }
+
+    legend {
+        font-size: 13px;
+        padding: 0 8px;
+        color: var(--accent);
+        font-weight: bold;
+    }
+
+    .row {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 16px;
+        margin-bottom: 14px;
+    }
+
+    label {
+        font-size: 12px;
+        color: var(--text-muted);
+        margin-bottom: 4px;
+        display: block;
+    }
+
+    input, select, textarea {
+        width: 100%;
+        padding: 8px 9px;
+        border: 1px solid var(--border);
+        font-size: 13px;
+        background: #fff;
+    }
+
+    textarea { min-height: 70px; resize: vertical; }
+
+    .actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 12px;
+        margin-top: 30px;
+    }
+
+    button {
+        padding: 9px 18px;
+        font-size: 13px;
+        border: 1px solid var(--border);
+        background: #f0f0f0;
+        cursor: pointer;
+    }
+
+    button.primary {
+        background: #e6efe4;
+        border-color: var(--accent);
+    }
+</style>
+</head>
+
+<body>
+
+<div class="form-wrapper">
+
+<form action="https://google.com" method="get">
+
+<h1>Farmer Distribution & Production Monitoring Form</h1>
+<p class="subtitle">
+Used for recording agricultural input distribution, usage, harvest, and storage outcomes.
+</p>
+
+<!-- Farmer Information -->
+<fieldset>
+<legend>Farmer Identification</legend>
+<div class="row">
+    <div>
+        <label>Farmer Full Name</label>
+        <input type="text" value="Ahmed Mohamed Hassan">
+    </div>
+    <div>
+        <label>Phone Number</label>
+        <input type="tel" value="+252612345678">
+    </div>
+    <div>
+        <label>Village / District</label>
+        <input type="text" value="Jowhar District">
+    </div>
+</div>
+</fieldset>
+
+<!-- Seed Distribution -->
+<fieldset>
+<legend>Seed Distribution & Planting</legend>
+<div class="row">
+    <div>
+        <label>Seed Type</label>
+        <select>
+            <option>Maize</option>
+            <option selected>Sorghum</option>
+            <option>Beans</option>
+            <option>Vegetables</option>
+        </select>
+    </div>
+    <div>
+        <label>Quantity Received (kg)</label>
+        <input type="number" step="0.1" value="20">
+    </div>
+    <div>
+        <label>Quantity Planted (kg)</label>
+        <input type="number" step="0.1" value="15">
+    </div>
+    <div>
+        <label>Remaining / Stored (kg)</label>
+        <input type="number" step="0.1" value="5">
+    </div>
+</div>
+</fieldset>
+
+<!-- Farm Tools -->
+<fieldset>
+<legend>Farm Tools Distributed</legend>
+<div class="row">
+    <div>
+        <label>Tool Type</label>
+        <select>
+            <option>Hoe</option>
+            <option selected>Plough</option>
+            <option>Water Pump</option>
+            <option>Sprayer</option>
+        </select>
+    </div>
+    <div>
+        <label>Quantity Received</label>
+        <input type="number" value="1">
+    </div>
+    <div>
+        <label>Currently in Use</label>
+        <select>
+            <option selected>Yes</option>
+            <option>No</option>
+        </select>
+    </div>
+</div>
+</fieldset>
+
+<!-- Fertilizer -->
+<fieldset>
+<legend>Fertilizer Distribution & Use</legend>
+<div class="row">
+    <div>
+        <label>Fertilizer Type</label>
+        <select>
+            <option>DAP</option>
+            <option selected>UREA</option>
+            <option>NPK</option>
+            <option>Organic</option>
+        </select>
+    </div>
+    <div>
+        <label>Quantity Received (kg)</label>
+        <input type="number" step="0.1" value="25">
+    </div>
+    <div>
+        <label>Quantity Applied (kg)</label>
+        <input type="number" step="0.1" value="18">
+    </div>
+</div>
+</fieldset>
+
+<!-- Harvest -->
+<fieldset>
+<legend>Harvest Information</legend>
+<div class="row">
+    <div>
+        <label>Crop Harvested</label>
+        <input type="text" value="Sorghum">
+    </div>
+    <div>
+        <label>Total Harvest (kg)</label>
+        <input type="number" step="0.1" value="320">
+    </div>
+    <div>
+        <label>Harvest Season</label>
+        <select>
+            <option selected>Gu</option>
+            <option>Deyr</option>
+        </select>
+    </div>
+</div>
+</fieldset>
+
+<!-- Storage -->
+<fieldset>
+<legend>Storage & Post-Harvest</legend>
+<div class="row">
+    <div>
+        <label>Storage Method</label>
+        <select>
+            <option>Sacks</option>
+            <option selected>Hermetic Bags</option>
+            <option>Granary</option>
+        </select>
+    </div>
+    <div>
+        <label>Quantity Stored (kg)</label>
+        <input type="number" step="0.1" value="250">
+    </div>
+    <div>
+        <label>Estimated Losses (kg)</label>
+        <input type="number" step="0.1" value="10">
+    </div>
+</div>
+
+<label>Challenges / Notes</label>
+<textarea>
+Late rainfall affected early planting; minor pest damage observed.
+</textarea>
+</fieldset>
+
+<div class="actions">
+    <button type="reset">Clear</button>
+    <button type="submit" class="primary">Save Record</button>
+</div>
+
+</form>
+
+</div>
+
+</body>
+</html>
