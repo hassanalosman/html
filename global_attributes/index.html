@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html
+    lang="en"
+    dir="ltr"
+    title="HTML Root Element"
+    data-app="global-demo"
+>
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Global Attributes – Complete Demo</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f5f7;
+            padding: 20px;
+        }
+        .box {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 15px;
+            background: #fff;
+        }
+    </style>
+</head>
+
+<body
+    id="mainBody"
+    class="page"
+    title="Main page body"
+    data-page="home"
+    tabindex="0"
+    spellcheck="true"
+    translate="yes"
+>
+
+    <header
+        id="siteHeader"
+        class="box"
+        title="Header section"
+        data-section="header"
+        draggable="true"
+    >
+        <h1
+            id="mainTitle"
+            class="title"
+            title="Main heading"
+            contenteditable="true"
+            spellcheck="true"
+        >
+            HTML Global Attributes Demonstration
+        </h1>
+    </header>
+
+    <nav
+        id="mainNav"
+        class="box"
+        title="Navigation bar"
+        data-nav="primary"
+    >
+        <ul
+            id="navList"
+            class="menu"
+            title="Navigation list"
+        >
+            <li
+                id="navItem1"
+                class="item"
+                title="Home item"
+                tabindex="1"
+            >
+                Home
+            </li>
+
+            <li
+                id="navItem2"
+                class="item"
+                title="About item"
+                tabindex="2"
+            >
+                About
+            </li>
+        </ul>
+    </nav>
+
+    <section
+        id="contentSection"
+        class="box"
+        title="Main content"
+        data-section="content"
+    >
+        <article
+            id="articleOne"
+            class="article"
+            title="Article element"
+            draggable="false"
+        >
+            <h2
+                id="articleHeading"
+                class="heading"
+                title="Article heading"
+            >
+                What are Global Attributes?
+            </h2>
+
+            <p
+                id="articleText"
+                class="text"
+                title="Editable paragraph"
+                contenteditable="true"
+                spellcheck="true"
+                dir="auto"
+            >
+                Global attributes can be used on any HTML element.
+                Try editing this text.
+            </p>
+        </article>
+    </section>
+
+    <aside
+        id="sideNote"
+        class="box"
+        title="Side note"
+        data-area="aside"
+        hidden
+    >
+        This content is hidden using the global attribute "hidden".
+    </aside>
+
+    <div
+        id="infoBox"
+        class="box"
+        title="Info box"
+        dir="auto"
+        contenteditable="true"
+        lang="en"
+        tabindex="3"
+        accesskey="i"
+        spellcheck="true"
+        data-box="info"
+    >
+        Edit me and see how global attributes work!
+    </div>
+
+    <a
+        id="demoLink"
+        class="box"
+        href="#"
+        title="Demo link"
+        data-link="example"
+        accesskey="l"
+    >
+        Sample Link (Alt + L)
+    </a>
+
+    <img
+        id="demoImage"
+        class="box"
+        src=""
+        alt="Demo image"
+        title="Image element"
+        data-img="demo"
+        draggable="true"
+    >
+
+    <footer
+        id="siteFooter"
+        class="box"
+        title="Footer section"
+        data-section="footer"
+        style="text-align:center;"
+    >
+        <p
+            id="footerText"
+            title="Footer text"
+            data-year="2026"
+        >
+            © 2026 Global Attributes Demo
+        </p>
+    </footer>
+<img id="infoBox"
+        class="box"
+        title="Info box"
+        dir="auto"
+        contenteditable="true"
+        lang="en"
+        tabindex="3"
+        accesskey="i"
+        spellcheck="true"
+        data-box="info" src="" alt="">
+</body>
+</html>
