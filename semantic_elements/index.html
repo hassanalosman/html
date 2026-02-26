@@ -2,63 +2,114 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>HTML5 Semantic Elements</title>
-</head>
+    <title>HTML5 Semantic Elements Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f5f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, nav, main, section, article, aside, footer {
+            background: #ffffff;
+            margin: 10px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+
+        header { background: #e3f2fd; }
+        nav { background: #f1f8e9; }
+        section { background: #fffde7; }
+        article { background: #e8f5e9; }
+        aside { background: #fce4ec; }
+        footer { background: #ede7f6; }
+
+        nav a {
+            margin-right: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        figure {
+            margin: 10px 0;
+        }
+
+        details {
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px dashed #aaa;
+        }
+
+        mark {
+            background: yellow;
+        }
+    </style>
+</head>
 <body>
 
-<header>
-    <h1>HTML5 Semantic Website</h1>
-    <p>All core HTML5 semantic elements</p>
-</header>
+    <header>
+        <h1>My Simple HTML5 Website</h1>
+        <p>This page demonstrates all main HTML5 semantic elements.</p>
+    </header>
 
-<nav>
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-    </ul>
-</nav>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
+    </nav>
 
-<main>
+    <main>
 
-    <section>
-        <h2>Section</h2>
-        <p>A thematic grouping of content.</p>
-    </section>
+        <section>
+            <h2>About Section</h2>
+            <p>This is a <mark>section</mark> of the website.</p>
 
-    <article>
-        <h2>Article</h2>
-        <p>This content can stand alone.</p>
-    </article>
+            <article>
+                <h3>Article Example</h3>
+                <p>This is an article inside a section.</p>
+            </article>
 
-    <aside>
-        <h2>Aside</h2>
-        <p>Related or supporting information.</p>
-    </aside>
+            <figure>
+                <img src="https://via.placeholder.com/300x150" alt="Placeholder image">
+                <figcaption>Figure with image and caption</figcaption>
+            </figure>
+        </section>
 
-    <figure>
-        <img src="https://via.placeholder.com/250" alt="Sample image">
-        <figcaption>Figure caption (HTML5)</figcaption>
-    </figure>
+        <aside>
+            <h2>Aside Content</h2>
+            <p>This is extra content (sidebar).</p>
+        </aside>
 
-    <details>
-        <summary>More Info (details & summary)</summary>
-        <p>These elements are new in HTML5.</p>
-    </details>
+        <section>
+            <h2>More Semantic Elements</h2>
 
-    <time datetime="2026-02-06">6 February 2026</time>
+            <p>Current progress:</p>
+            <progress value="70" max="100"></progress>
 
-    <mark>Highlighted text using &lt;mark&gt;</mark>
+            <p>Disk usage:</p>
+            <meter value="0.6"></meter>
 
-</main>
+            <details>
+                <summary>Click to expand details</summary>
+                <p>This content is hidden by default.</p>
+            </details>
 
-<footer>
-    <address>
-        Contact: <a href="mailto:info@example.com">info@example.com</a>
-    </address>
-    <p>&copy; 2026 HTML5 Demo</p>
-</footer>
+            <time datetime="2026-02-14">14 February 2026</time>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My Website</p>
+        <address>
+            Contact: info@example.com
+        </address>
+    </footer>
 
 </body>
 </html>
