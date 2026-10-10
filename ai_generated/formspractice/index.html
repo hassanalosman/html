@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>NGO Farmer Registration</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7f8;
+    padding: 20px;
+}
+form {
+    max-width: 1000px;
+    margin: auto;
+}
+fieldset {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 25px;
+    background: #fff;
+}
+legend {
+    font-weight: bold;
+    color: #2e6f57;
+}
+.row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+.col { flex: 1; }
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+input, select {
+    width: 100%;
+    padding: 8px;
+}
+</style>
+</head>
+
+<body>
+
+<form action="submit.php" method="POST" autocomplete="on">
+
+<!-- 1. FARMER IDENTIFICATION -->
+<fieldset>
+<legend>Farmer Identification</legend>
+
+<div class="row">
+<div class="col">
+<label>Full Name</label>
+<input type="text" name="name" placeholder="Enter full name" required autofocus>
+</div>
+
+<div class="col">
+<label>Phone</label>
+<input type="tel" maxlength="12" placeholder="+252..." required>
+</div>
+
+<div class="col">
+<label>Email</label>
+<input type="email" placeholder="example@mail.com">
+</div>
+</div>
+
+<div class="row">
+<div class="col">
+<label>Registration ID</label>
+<input type="text" value="AUTO-1001" readonly>
+</div>
+
+<div class="col">
+<label>Country</label>
+<input type="text" value="Somalia" disabled>
+</div>
+
+<div class="col">
+<label>Password</label>
+<input type="password">
+</div>
+</div>
+
+</fieldset>
+
+<!-- 2. LAND INFORMATION -->
+<fieldset>
+<legend>Land Ownership & Size</legend>
+
+<div class="row">
+<div class="col">
+<label>Land Size (Hectares)</label>
+<input type="number" min="1" max="500" required>
+</div>
+
+<div class="col">
+<label>Land Value (USD)</label>
+<input type="number" step="0.01">
+</div>
+
+<div class="col">
+<label>Land Code</label>
+<input type="text" pattern="[A-Z]{3}" placeholder="e.g. MOG" size="10">
+</div>
+</div>
+
+<div class="row">
+<div class="col">
+<label>Ownership Document</label>
+<input type="file" multiple>
+</div>
+
+<div class="col">
+<label>Ownership Date</label>
+<input type="date">
+</div>
+
+<div class="col">
+<label>Inspection Time</label>
+<input type="time">
+</div>
+</div>
+
+<div class="row">
+<div class="col">
+<label>Full Inspection</label>
+<input type="datetime-local">
+</div>
+
+<div class="col">
+<label>Inspection Month</label>
+<input type="month">
+</div>
+
+<div class="col">
+<label>Inspection Week</label>
+<input type="week">
+</div>
+</div>
+
+</fieldset>
+
+<!-- 3. LIVELIHOOD -->
+<fieldset>
+<legend>Livelihood & Livestock</legend>
+
+<div class="row">
+<div class="col">
+<label>Livelihood Type</label>
+<select required>
+<option value="">-- Select --</option>
+<option>Crop Farming</option>
+<option>Pastoralism</option>
+</select>
+</div>
+
+<div class="col">
+<label>Animals Owned</label>
+<input list="animals" placeholder="Choose animals">
+<datalist id="animals">
+<option value="Cattle">
+<option value="Goats">
+<option value="Camels">
+</datalist>
+</div>
+
+<div class="col">
+<label>Experience</label>
+<input type="range" min="0" max="60">
+</div>
+</div>
+
+<div class="row">
+<div class="col">
+<label>Gender</label>
+<input type="radio" name="gender" value="male"> Male
+<input type="radio" name="gender" value="female"> Female
+</div>
+
+<div class="col">
+<label>Assets</label>
+<input type="checkbox"> Tractor
+<input type="checkbox"> Plough
+</div>
+
+<div class="col">
+<label>Search Record</label>
+<input type="search" placeholder="Search farmer">
+</div>
+</div>
+
+</fieldset>
+
+<!-- 4. EXTRA INFORMATION -->
+<fieldset>
+<legend>Additional Details</legend>
+
+<div class="row">
+<div class="col">
+<label>Website</label>
+<input type="url" placeholder="https://...">
+</div>
+
+<div class="col">
+<label>Favorite Color</label>
+<input type="color">
+</div>
+
+<div class="col">
+<label>Profile Image</label>
+<input type="image" src="submit.png" width="100" height="40" alt="Submit">
+</div>
+</div>
+
+<input type="hidden" value="NGO2026">
+
+<br><br>
+
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+<input type="button" value="Help">
+
+</fieldset>
+
+</form>
+
+</body>
+</html>
